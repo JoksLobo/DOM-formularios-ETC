@@ -13,10 +13,6 @@ function campoVazio(elemento) {
   elemento.value = "";
 }
 
-function changeImg(elemento) {
-  elemento.src = "./imagem2.png";
-}
-
-function originalImg(elemento) {
-  elemento.src = "./imagem1.png";
+function changeImg(elemento, imagem) {
+  elemento.src = imagem;
 }
