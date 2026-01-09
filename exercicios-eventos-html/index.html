@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>exercicios Eventos HTML</title>
+  </head>
+  <body>
+    <h2>Eventos em HTML - Exercicios</h2>
+    <p
+      onmouseover="this.style.color = 'red'"
+      onmouseout="this.style.color = 'black'"
+    >
+      Passe o mouse aqui para mudar a cor do texto
+    </p>
+    <button onclick="onClick()">Clique aqui</button>
+    <input
+      onfocus="this.value = 'Campo em foco'"
+      onblur="this.value = ''"
+      type="text"
+      placeholder="Digite aqui"
+    />
+    <img
+      src="./imagem1.png"
+      alt="imagem misteriosa"
+      onmouseover="this.src = './imagem2.png'"
+      onmouseout="this.src = './imagem1.png'"
+    />
+
+    <script src="script.js"></script>
+  </body>
+</html>
