@@ -9,23 +9,23 @@
   <body>
     <h2>Eventos em HTML - Exercicios</h2>
     <p
-      onmouseover="this.style.color = 'red'"
-      onmouseout="this.style.color = 'black'"
+      onmouseover="changeColor(this, 'red')"
+      onmouseout="changeColor(this, 'black')"
     >
       Passe o mouse aqui para mudar a cor do texto
     </p>
     <button onclick="onClick()">Clique aqui</button>
     <input
-      onfocus="this.value = 'Campo em foco'"
-      onblur="this.value = ''"
+      onfocus="mudaMensagem(this)"
+      onblur="campoVazio(this)"
       type="text"
       placeholder="Digite aqui"
     />
     <img
       src="./imagem1.png"
       alt="imagem misteriosa"
-      onmouseover="this.src = './imagem2.png'"
-      onmouseout="this.src = './imagem1.png'"
+      onmouseover="changeImg(this)"
+      onmouseout="originalImg(this)"
     />
 
     <script src="script.js"></script>
