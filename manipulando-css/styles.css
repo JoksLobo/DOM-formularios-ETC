@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 40px;
+}
+
+#meuElemento {
+  width: 200px;
+  height: 200px;
+  background: #3498bd;
+  margin-bottom: 15px;
+}
+
+.square {
+  border-radius: 0%;
+}
+
+.circle {
+  border-radius: 100%;
+}
