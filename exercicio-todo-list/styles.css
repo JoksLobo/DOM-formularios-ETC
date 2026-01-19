@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 65.2%;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.2;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  width: 900px;
+  height: 100%;
+  margin: 5rem auto;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  border: 1px solid rgb(150, 145, 145);
+  border-radius: 0.5rem;
+
+  .input-box {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    input {
+      padding: 0.5rem;
+      width: 25rem;
+    }
+  }
+  button {
+    height: 3.5rem;
+    width: 12rem;
+    padding: 1rem;
+    background: rgb(89, 140, 248);
+    border: none;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover {
+      background: rgb(57, 109, 219);
+    }
+  }
+
+  #taskList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    list-style: none;
+
+    & li {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 1.7rem;
+    }
+  }
+}
