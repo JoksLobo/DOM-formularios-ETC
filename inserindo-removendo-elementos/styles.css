@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  font-size: 62.5%;
+  font-family: "Montserrat", sans-serif;
+}
+
+#container {
+  padding: 35px 25px;
+  font-size: 1.1rem;
+
+  & h1,
+  ul {
+    margin-bottom: 15px;
+  }
+
+  button {
+    background: rgb(91, 131, 218);
+    padding: 15px;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background: rgb(64, 64, 230);
+    }
+  }
+}
