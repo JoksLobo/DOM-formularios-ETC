@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evento Javascript</title>
+  </head>
+  <body>
+    <h1>Eventos com Javascript</h1>
+
+    <button id="meuBotao">Clique Aqui!</button>
+
+    <script>
+      function clicouNobotao() {
+        console.log("clicou o botão");
+      }
+      let botao = document.getElementById("meuBotao");
+
+      botao.addEventListener("click", clicouNobotao);
+
+      setTimeout(function () {
+        botao.removeEventListener("click", clicouNobotao);
+        console.log("Manipulador de evento foi removido após 5s.");
+      }, 5000);
+    </script>
+  </body>
+</html>
