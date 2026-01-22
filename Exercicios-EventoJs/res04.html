@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>resolução do exercico 04</title>
+    <style>
+      body {
+        height: 2000px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Prevenir Rolagem para Baixo e Remover Event Listener</h1>
+
+    <script>
+      let countArrowDown = 0;
+
+      function preventScroll(e) {
+        countArrowDown++;
+        console.log(countArrowDown);
+        if (e.key === "ArrowDown") {
+          e.preventDefault();
+          console.log("Rolagem para baixo foi desativada");
+
+          if (countArrowDown >= 10) {
+            console.log("Removendo eventListener após 10 pressionamentos");
+            document.removeEventListener("keydown", preventScroll);
+          }
+        }
+      }
+      document.addEventListener("keydown", preventScroll);
+    </script>
+  </body>
+</html>
+
+<!-- Exercício 4: Prevenir Rolagem para Baixo e Remover Event Listener
+
+Passo 1: Estrutura HTML
+- Crie um novo arquivo HTML e sua estrura básica.
+- Adicione um cabeçalho (<h1>) para indicar a finalidade do exercício.
+
+Passo 2: CSS (Opcional)
+- Acrescente um estilo CSS no <head> para definir a altura do corpo (body) com height: 2000px; para simular uma página longa.
+
+Passo 3: JavaScript para Prevenir a Rolagem
+- No <body> do arquivo, inclua um script que utilize variáveis para contar o número de pressionamentos da tecla "ArrowDown".
+- Crie uma função preventScroll(event) que será chamada sempre que a tecla for pressionada. 
+- Dentro dessa função, incremente a variável count para contar os pressionamentos da tecla.
+- Verifique se a tecla pressionada é "ArrowDown". Se for, use event.preventDefault() para desativar a rolagem para baixo.
+- Se o número de pressionamentos atingir ou exceder 10, remova o event listener com document.removeEventListener().
+
+Passo 4: Adição do Event Listener
+- Use document.addEventListener() para adicionar o event listener à tecla "ArrowDown", conectando-o à função preventScroll() criada anteriormente. -->
