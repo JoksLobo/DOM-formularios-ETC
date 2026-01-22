@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resolução do Exercício 01</title>
+    <style>
+      #changeColor {
+        height: 300px;
+        width: 300px;
+        background: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="changeColor"></div>
+
+    <script>
+      // seleciona o elemento
+      const div = document.getElementById("changeColor");
+
+      function handleMouseOver() {
+        div.style.background = "red";
+      }
+
+      function handleMouseOut() {
+        div.style.background = "black";
+      }
+
+      div.addEventListener("mouseover", handleMouseOver);
+      div.addEventListener("mouseout", handleMouseOut);
+    </script>
+  </body>
+</html>
+
+<!-- Exercício 1 : Alteração de Cor ao Passar o Mouse
+
+Passo 1: Configuração do Arquivo HTML
+- Crie um novo arquivo HTML.
+- Estruture o arquivo com as tags HTML básicas.
+
+Passo 2: Adição de um Elemento <div>
+- No corpo (<body>) do arquivo HTML, adicione um elemento <div> com um id específico, por exemplo, id="changeColor".
+
+Passo 3: Estilização do Elemento com CSS
+- No cabeçalho (<head>) do arquivo HTML, adicione um bloco de estilo CSS.
+- Defina um estilo para o elemento <div> com o ID especificado anteriormente (#changeColor), atribuindo-lhe dimensões e uma cor de fundo inicial.
+
+Passo 4: Interação com JavaScript
+- Dentro da tag <script> no final do arquivo HTML, selecione o elemento <div> utilizando document.getElementById() e armazene-o em uma variável.
+- Crie duas funções JavaScript: uma para lidar com o evento de passar o mouse sobre o elemento (handleMouseOver()), e outra para lidar com o evento de tirar o mouse de cima do elemento (handleMouseOut()).
+- Dentro dessas funções, utilize element.style.backgroundColor para alterar a cor de fundo do elemento quando o evento ocorrer.
+
+Passo 5: Adição de Event Listeners
+- Use element.addEventListener() para adicionar event listeners ao elemento <div> para os eventos mouseover e mouseout, conectando-os às funções criadas anteriormente. -->
