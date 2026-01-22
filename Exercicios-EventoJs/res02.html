@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width='device-width', initial-scale=1.0" />
+    <title>Resoluço Exercício 02</title>
+  </head>
+  <body>
+    <button id="btn">Contar</button>
+
+    <script>
+      const meuBotao = document.getElementById("btn");
+
+      let count = 0;
+
+      function handleClick() {
+        console.log(count++);
+
+        if (count > 3) {
+          meuBotao.removeEventListener("click", handleClick);
+          console.log("A contagem chegou ao máximo");
+        }
+      }
+
+      meuBotao.addEventListener("click", handleClick);
+    </script>
+  </body>
+</html>
+
+<!-- Exercício 2 : Remoção de Event Listener após N cliques
+
+Passo 1: Estrutura HTML Simples
+- Crie um novo arquivo HTML e estruture o arquivo com as tags básicas
+- Adicione um botão (<button>) com um ID específico, por exemplo, id="btn".
+
+Passo 2: Manipulação de Eventos em JavaScript
+- No <script> ao final do arquivo, selecione o botão e armazene-o em uma variável.
+- Inicialize uma variável count que armazenará o número de cliques no botão.
+- Crie uma função JavaScript (handleClick()) que será chamada sempre que o botão for clicado. 
+- Dentro desta função, incremente a variável count e exiba a quantidade de cliques no console.
+- Adicione uma condição dentro da função handleClick() para verificar se o número de cliques atingiu ou excedeu um determinado limite (por exemplo, 3 cliques). 
+- Se a condição for atendida, remova o event listener do botão usando btn.removeEventListener().
+
+Passo 3: Adição de Event Listener
+- Use btn.addEventListener() para adicionar um event listener ao botão para o evento click, conectando-o à função handleClick() criada anteriormente.
+
+Exercício 3: Prevenção de Envio de Formulário -->
