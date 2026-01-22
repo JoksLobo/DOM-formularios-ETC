@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resolução do Exercício 3</title>
+  </head>
+  <body>
+    <form id="myForm">
+      <input type="text" placeholder="Seu Nome" />
+      <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+      const form = document.getElementById("myForm");
+      const input = document.querySelector("input");
+
+      function handleSubmit(e) {
+        e.preventDefault();
+        console.log("não envia");
+      }
+
+      form.addEventListener("submit", handleSubmit);
+      input.addEventListener("keypress", function (e) {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          console.log("Pressionar o Enter não envia o formulário");
+        }
+      });
+    </script>
+  </body>
+</html>
+
+<!-- Exercício 3: Prevenção de Envio de Formulário
+
+Passo 1: Estrutura HTML
+- Crie um arquivo HTML e inclua uma estrutura básica.
+- Adicione um formulário (<form>) com um ID específico, por exemplo, id="myForm".
+- No formulário, adicione um campo de entrada (<input>) do tipo texto e um botão (<button>) para enviar.
+
+Passo 2: Captura de Elementos e Eventos em JavaScript
+- No <script> ao final do arquivo, selecione o formulário e armazene-o em uma variável.
+- Crie uma função JavaScript (handleSubmit()) para lidar com o evento de envio do formulário. 
+- Dentro desta função, utilize event.preventDefault() para prevenir o comportamento padrão de envio do formulário e exiba uma mensagem no console.
+
+Passo 3: Adição de Event Listeners
+- Utilize form.addEventListener() para adicionar um event listener ao formulário para o evento submit, conectando-o à função handleSubmit().
+
+Passo 4: Prevenção do Envio com Enter no Campo de Entrada
+- Selecione o campo de entrada dentro do formulário e armazene-o em uma variável.
+- Adicione um event listener para o evento keypress ao campo de entrada para detectar a tecla "Enter" pressionada 
+- Utilize event.preventDefault() para prevenir o envio do formulário ao pressionar "Enter". -->
