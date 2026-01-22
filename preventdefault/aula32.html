@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,20 +9,17 @@
     <h1>Prevent Default</h1>
 
     <a href="https://www.hashtagtreinamentos.com/curso-javascript" id="meuLink">
-      Clique aquie para ir até a página de Javascript da Hashtag!
+      Clique aqui para ir até a página de Javascript da Hashtag!
     </a>
 
     <script>
-      //Seleciona o elemento link (ancora)
-      const meuLink = document.getElementById("meuLink");
+      const link = document.getElementById("meuLink");
 
-      //Adicionar um evento de clique ao link
-      meuLink.addEventListener("click", function (event) {
-        event.preventDefault();
+      // add um evenbto de click no link
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
 
-        console.log("O comportamento padrão do link foi prevenido");
-
-        window.location.href = "https:www.google.com";
+        console.log("O comportamento padrão do link foi previnido.");
       });
     </script>
   </body>
