@@ -1,14 +1,13 @@
-// formDara - { nome: "Millene", emial:"email@email.com"};
-
+//FormData - { nome: "Joks", email: "email@email.com" };
 document.addEventListener("DOMContentLoaded", function () {
-  const formulario = document.getElementById("meuFormulario");
+  const myForm = document.getElementById("meuFormulario");
 
-  formulario.addEventListener("submit", function (event) {
-    event.preventDefault(); //impede a submissão tradicional do formulario
+  myForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-    let dados = new FormData(formulario);
+    let dados = new FormData(myForm);
 
-    //exibir os dados no console
+    //exibir dados no console
     for (let [chave, valor] of dados.entries()) {
       console.log(chave + ":" + valor);
     }
