@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const myForm = document.getElementById("meuFormulario");
 
   myForm.addEventListener("submit", function (e) {
+    resetarMensagensErro();
     if (!validarCamposObrigatorios()) {
       e.preventDefault();
     }
@@ -20,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
       let campo = camposObrigatorios[i];
 
       if (campo.value === "" || campo.value === null) {
-        console.log("Este campo é obrigatorio");
+        exibirErro(campo, "Campo obrigatório");
         camposValidos = false;
       }
     }
@@ -32,9 +33,23 @@ document.addEventListener("DOMContentLoaded", function () {
     let confirmarSenha = document.getElementById("confirmarSenha");
 
     if (senha.value !== confirmarSenha.value) {
-      console.log("As senhas não são iguais");
+      exibirErro(confirmarSenha, "As senhas não coincidem");
       return false;
     }
     return true;
+  }
+
+  function exibirErro(elemento, mensagem) {
+    let mensagemErro = elemento.parentElement.querySelector(".error-message");
+    mensagemErro.textContent = mensagem;
+    mensagemErro.style.display = "inline-block";
+  }
+
+  function resetarMensagensErro() {
+    let mensagensErro = document.querySelectorAll(".error-message");
+
+    for (let i = 0; i < mensagensErro.length; i++) {
+      mensagensErro[i].textContent = "";
+    }
   }
 });
