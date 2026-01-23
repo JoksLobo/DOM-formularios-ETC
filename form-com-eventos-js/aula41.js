@@ -24,3 +24,10 @@ input.addEventListener("focus", function () {
 input.addEventListener("blur", function () {
   console.log("Campo de texto desfocado!");
 });
+
+// manipulação do formulário
+function mostrarValorCampo() {
+  input.value;
+
+  alert("O valor do campo de texto é: " + input.value);
+}
