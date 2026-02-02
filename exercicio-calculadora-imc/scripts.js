@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const peso = parseFloat(pesoInput.value);
 
     const imc = peso / (altura * altura);
-    console.log(Math.floor(imc));
 
     let categoria;
     if (imc < 18.5) {
@@ -43,5 +42,12 @@ document.addEventListener("DOMContentLoaded", function () {
       <p>IMC: ${imc.toFixed(2)}</p>
       <p>Categoria: ${categoria}</p>
     `;
+
+    document.getElementById("categoria").value = categoria;
+    let dados = new FormData(formulario);
+
+    for (let [chave, valor] of dados.entries()) {
+      console.log(chave + ": " + valor);
+    }
   });
 });
