@@ -24,7 +24,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //limpar os dados do local storage
     botaoLimpar.addEventListener("click", () => {
-      localStorage.clear();
+      localStorage.removeItem("nome");
+      localStorage.removeItem("idade");
+      alert("Dados removidos com sucesso");
+    });
+
+    //carregar os dados do local storage
+    const botaoCarregar = document.getElementById("carregar");
+    botaoCarregar.addEventListener("click", () => {
+      const nome = localStorage.getItem("nome");
+      const idade = localStorage.getItem("idade");
+      document.getElementById("texto").innerHTML =
+        `Nome: ${nome} <br> Idade: ${idade}`;
     });
   });
 });
